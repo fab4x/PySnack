@@ -1,7 +1,7 @@
 #python script for a vending machine
 #it can only handle one item at the time.
 
-#import library to pause and to measure the time between start and end
+#import time library to pause and to measure the time between start and end
 import time
 
 #array with products - extend as you please
@@ -12,10 +12,16 @@ prices = ['2.50', '2.00', '3.00']
 storage = [10, 5, 1]
 
 def calc():
-    for i in range(len(storage)):
+    for i in (storage):
         if i < 1:
-            storage.pop(i)
-            snacks.pop(csnack)
+            print(storage(i))
+            print(storage.index)
+
+
+    #for i in range(len(storage)):
+        #if i < 1:
+            #storage.pop(i)
+            #snacks.pop(csnack)
 
 
 #try and catch to avoid an unplanned exit
@@ -38,7 +44,12 @@ while True:
         storage[csnack] = amount
         #print array with new amount of items
         print(storage)
-        
+
+
+        if storage[csnack] < 1:
+            print("Less than one")
+        else:
+            print("All good")        
         # if amount < 1 return error and pop item out of list
         #for i in range(len(storage)):
          #   if i < 1:
@@ -46,7 +57,7 @@ while True:
            #     storage.pop(i)
 
         #call function calc
-        calc()  
+        #calc()  
         #print the array with the amount of items left
         print(amount)
         print(chose + "\n")
